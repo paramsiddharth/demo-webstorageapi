@@ -1,0 +1,46 @@
+body {
+    background-color: #ffec40;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+h1 {
+    color: #0557b4;
+    text-shadow: 1px 1px 2px #337c65;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#main-part {
+    width: 80%;
+    margin: 3px auto;
+    text-align: center;
+}
+
+.input-box {
+    display: block;
+    margin: 4px auto;
+    background-color: #00fff2;
+    border: 2px solid black;
+    font-family: monospace;
+    color: darkred;
+}
+
+#key {
+    height: 20px;
+}
+
+#value {
+    height: 80px;
+    width: 280px;
+}
+
+.cmd-button {
+    background-color: chocolate;
+    color: aliceblue;
+    border: 3px solid rgb(2, 2, 41);
+    border-radius: 2px;
+    font-size: 20px;
+}

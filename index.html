@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel='stylesheet' href='style.css'>
+		<link rel='icon' href='icon.png'>
+		<title>Store data!</title>
+	</head>
+	<body>
+		<h1>Store your data!</h1>
+		<h3>Use the HTML Web Storage API to store text data. <a href='show.html'>Show data instead.</a></h3>
+		<div id='main-part'>
+			<label for='Name'>Variable:</label>
+			<input class='input-box' type='text' id='key'>
+			<label for='value'>Value:</label>
+			<textarea class='input-box' id='value'></textarea>
+			<button id='set-value' class='cmd-button'>Store!</button>
+		</div>
+		<script>
+			document.querySelector('#set-value').onclick = function() {
+				let key = document.querySelector('#key').value,
+					value = document.querySelector('#value').value;
+				localStorage[key] = value;
+				document.querySelector('#key').value = '';
+				document.querySelector('#value').value = '';
+			};
+		</script>
+	</body>
+</html>

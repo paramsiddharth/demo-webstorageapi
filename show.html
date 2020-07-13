@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link rel='stylesheet' href='style.css'>
+		<link rel='icon' href='icon.png'>
+		<title>Show data!</title>
+	</head>
+	<body>
+		<h1>Show your data!</h1>
+		<h3>Show the text data previously stored using the HTML Web Storage API. <a href='index.html'>Store data instead.</a></h3>
+		<div id='main-part'>
+			<label for='Name'>Variable:</label>
+			<input class='input-box' type='text' id='key'>
+			<label for='value'>Value:</label>
+			<textarea disabled class='input-box' id='value'></textarea>
+            <button class='cmd-button' id='show-value'>Show!</button>
+            <button class='cmd-button' id='clear-value'>Clear Variable!</button>
+		</div>
+		<script>
+			document.querySelector('#show-value').onclick = function() {
+				let key = document.querySelector('#key').value;
+				document.querySelector('#value').value = localStorage[key];
+			};
+            document.querySelector('#clear-value').onclick = function() {
+                let key = document.querySelector('#key').value;
+                localStorage[key] = undefined;
+				document.querySelector('#value').value = undefined;
+            };
+		</script>
+	</body>
+</html>
