@@ -20,7 +20,7 @@
 			document.querySelector('#set-value').onclick = function() {
 				let key = document.querySelector('#key').value,
 					value = document.querySelector('#value').value;
-				localStorage[key] = value;
+				localStorage.setItem(key, value);
 				document.querySelector('#key').value = '';
 				document.querySelector('#value').value = '';
 			};

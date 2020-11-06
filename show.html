@@ -20,11 +20,11 @@
 		<script>
 			document.querySelector('#show-value').onclick = function() {
 				let key = document.querySelector('#key').value;
-				document.querySelector('#value').value = localStorage[key];
+				document.querySelector('#value').value = localStorage.getItem(key) ?? 'undefined';
 			};
             document.querySelector('#clear-value').onclick = function() {
                 let key = document.querySelector('#key').value;
-                localStorage[key] = undefined;
+                localStorage.removeItem(key);
 				document.querySelector('#value').value = undefined;
             };
 		</script>
